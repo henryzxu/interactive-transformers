@@ -10,7 +10,7 @@ import os
 import uuid
 import secrets
 
-from app import run_squad
+from run_squad import initialize, evaluate
 from data.squad_generator import convert_text_input_to_squad, \
     convert_file_input_to_squad, convert_context_and_questions_to_squad
 from settings import *
@@ -19,7 +19,7 @@ import requests
 os.makedirs(output_dir, exist_ok=True)
 
 # args, model, tokenizer = None, None, None
-args, model, tokenizer = run_squad.initialize()
+args, model, tokenizer = initialize()
 
 app = Flask(__name__)
 
@@ -136,7 +136,7 @@ def generate_highlight(context, id, start_index, stop_index):
 def evaluate_input(predict_file, passthrough=False):
     args.predict_file = predict_file
     t = time.time()
-    predictions = run_squad.evaluate(args, model, tokenizer)
+    predictions = evaluate(args, model, tokenizer)
     dt = time.time() - t
     app.logger.info("Loading time: %0.02f seconds" % (dt))
     if passthrough:
