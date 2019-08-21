@@ -11,7 +11,7 @@ import uuid
 import secrets
 
 from .run_squad import initialize, evaluate
-from .data.squad_generator import convert_text_input_to_squad, \
+from .squad_generator import convert_text_input_to_squad, \
     convert_file_input_to_squad, convert_context_and_questions_to_squad
 from .settings import *
 import requests

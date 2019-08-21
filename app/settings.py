@@ -1,7 +1,7 @@
 data_dir = 'data'
 output_dir = 'results'
 PORT = 8080
-gen_file = "./data/squad_input.json"
+gen_file = "app/data/squad_input.json"
 
 http_proxy = ""
 https_proxy = ""
