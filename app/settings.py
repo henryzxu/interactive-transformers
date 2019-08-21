@@ -1,5 +1,5 @@
-data_dir = 'data'
-output_dir = 'results'
+data_dir = 'app/data'
+output_dir = 'app/results'
 PORT = 8080
 gen_file = "app/data/squad_input.json"
 

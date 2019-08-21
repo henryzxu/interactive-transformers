@@ -16,8 +16,6 @@ from .squad_generator import convert_text_input_to_squad, \
 from .settings import *
 import requests
 
-os.makedirs(output_dir, exist_ok=True)
-
 # args, model, tokenizer = None, None, None
 args, model, tokenizer = initialize()
 
@@ -56,8 +54,8 @@ def process_input():
         for f in file_obj:
             file = request.files.get(f)
             app.logger.info("file upload {}".format(file.filename))
-            os.makedirs("./uploads", exist_ok=True)
-            filepath = os.path.join('./uploads', file.filename)
+            os.makedirs("./app/uploads", exist_ok=True)
+            filepath = os.path.join('./app/uploads', file.filename)
             file.save(filepath)
             file_urls.append(filepath)
         return "upload"

@@ -188,7 +188,7 @@ def initialize():
                         help="Model type selected in the list: " + ", ".join(MODEL_CLASSES.keys()))
     parser.add_argument("--model_name_or_path", default="bert-large-uncased-whole-word-masking-finetuned-squad", type=str,
                         help="Path to pre-trained model or shortcut name selected in the list: " + ", ".join(ALL_MODELS))
-    parser.add_argument("--output_dir", default="./results", type=str,
+    parser.add_argument("--output_dir", default="./app/results", type=str,
                         help="The output directory where the model checkpoints and predictions will be written.")
 
     ## Other parameters
@@ -196,7 +196,7 @@ def initialize():
                         help="Pretrained config name or path if not the same as model_name")
     parser.add_argument("--tokenizer_name", default="bert-large-uncased", type=str,
                         help="Pretrained tokenizer name or path if not the same as model_name")
-    parser.add_argument("--cache_dir", default="./cache", type=str,
+    parser.add_argument("--cache_dir", default=None, type=str,
                         help="Where do you want to store the pre-trained models downloaded from s3")
 
     parser.add_argument('--version_2_with_negative', action='store_true',
