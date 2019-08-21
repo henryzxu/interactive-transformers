@@ -6,7 +6,6 @@ from flask import Flask, request, jsonify, render_template, session, url_for, re
 from flask_dropzone import Dropzone
 import time
 from urllib.parse import unquote
-import wikipedia
 import os
 import uuid
 import secrets
