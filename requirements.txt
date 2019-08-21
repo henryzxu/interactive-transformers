@@ -20,10 +20,8 @@ pytorch-transformers==1.0.0
 regex==2019.6.8
 requests==2.22.0
 s3transfer==0.2.1
-sentencepiece==0.1.82
 six==1.12.0
 soupsieve==1.9.2
-tensorboardX==1.8
 torch==1.1.0
 tqdm==4.32.2
 urllib3==1.25.3
